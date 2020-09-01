@@ -8113,6 +8113,7 @@ def _do_test_create_remove_versions(client, bucket_name, key, num_versions, remo
 @attr(operation='create and remove versioned object')
 @attr(assertion='can create access and remove appropriate versions')
 @attr('versioning')
+@attr('fails_on_rgw')
 def test_versioning_obj_create_read_remove():
     bucket_name = get_new_bucket()
     client = get_client()
@@ -8132,6 +8133,7 @@ def test_versioning_obj_create_read_remove():
 @attr(operation='create and remove versioned object and head')
 @attr(assertion='can create access and remove appropriate versions')
 @attr('versioning')
+@attr('fails_on_rgw')
 def test_versioning_obj_create_read_remove_head():
     bucket_name = get_new_bucket()
 
